@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     */
+    
     protected $model = Post::class;
 
     /**

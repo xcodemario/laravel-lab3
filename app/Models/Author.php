@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    use HasFactory;  // ← add this
+    use HasFactory; 
 
     protected $fillable = [
         'name',
