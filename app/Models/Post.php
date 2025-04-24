@@ -2,19 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['author_id','title','content'];
+    use HasFactory;  // ← add this
 
-    // Inverse: Post belongs to one Author
+    protected $fillable = [
+        'author_id',
+        'title',
+        'content',
+    ];
+
     public function author()
     {
         return $this->belongsTo(Author::class);
     }
 
-    // One Post has many Comments
     public function comments()
     {
         return $this->hasMany(Comment::class);
